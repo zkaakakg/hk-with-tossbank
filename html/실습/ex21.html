@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습문제 - 그림과 같이 입력양식을 구현하시오.</title>
+  </head>
+  <body>
+    <h2>회원가입 폼</h2>
+    <form action="http://wwww.myserver.com">
+      <label for="name">이름 : </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="이름을 입력하세요."
+      />
+      <br />
+      <label for="pw">비밀번호 : </label>
+      <input
+        type="password"
+        id="pw"
+        name="pw"
+        placeholder="비번을 입력하세요."
+      />
+      <br />
+      <label for="phone">핸드폰 : </label>
+      <input
+        type=""
+        id="phone"
+        name="phone"
+        placeholder="핸드폰을 입력하세요."
+      />
+      <br />
+      <label for="email">이메일 : </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="이메일을 입력하세요."
+      />
+      <br />
+      성별
+      <input type="radio" name="gender" id="male" value="male" checked />
+      <label for="male">남성</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">여성</label>
+      <br />
+      취미
+      <input type="checkbox" name="hobby" id="walk" value="walk" />
+      <label for="walk">걷기</label>
+      <input type="checkbox" name="hobby" id="run" value="run" checked />
+      <label for="walk">달리기</label>
+      <input type="checkbox" name="hobby" id="bike" value="bike" />
+      <label for="bike">자전거타기</label>
+      <br />
+      <label for="address">사는 곳: </label>
+      <select name="address" id="address">
+        <option value="1" selected>서울</option>
+        <option value="2">경기</option>
+        <option value="3">인천</option>
+      </select>
+      <br />
+      <button type="submit">회원가입</button>
+    </form>
+  </body>
+</html>
