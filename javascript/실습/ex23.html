@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>함수 Function</title>
+    <script>
+      function myFunc1() {
+        console.log("myFunc1");
+        return;
+      }
+      myFunc1();
+
+      function myFunc2(param) {
+        console.log("mtFunc2" + param);
+        return;
+      }
+      myFunc2("홍길동");
+
+      function myFunc3() {
+        return "홍길동2";
+      }
+      const name = myFunc3();
+      console.log(name);
+
+      function myFunc4(param) {
+        return param * 2;
+      }
+      console.log(myFunc4(2));
+
+      //익명함수
+      let varFunc = function () {
+        console.log("varFunc()");
+        return;
+      };
+      varFunc();
+
+      //화살표 연산자 사용
+      let varFunc2 = () => {
+        console.log("varFunc2()");
+        return;
+      };
+      varFunc2();
+
+      let varFunc3 = (param) => {
+        console.log(param);
+      };
+      varFunc3("홍길동");
+
+      let sum = (param1, param2) => {
+        return param1 + param2;
+      };
+      let sub = (param1, param2) => {
+        return param1 - param2;
+      };
+      function calc(param1, param2, method) {
+        return method(param1, param2);
+      }
+      console.log(calc(10, 20, sum));
+      console.log(calc(10, 20, sub));
+      // 확장 : 버튼 눌렸을 때 처리해야 할 코드
+      //      : 통신 응답되었을 때 처리해야할 코드
+    </script>
+  </head>
+  <body></body>
+</html>
