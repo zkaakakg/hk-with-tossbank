@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>다음 로그인 화면</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        min-width: 760px;
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      #header {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+      #logo {
+        width: 100px;
+        height: 30px;
+        background-image: url(logo_kakao.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 30px;
+      }
+      #content {
+        width: 500px;
+        border: 1px solid lightgrey;
+        text-align: center;
+        padding: 70px 50px;
+        margin: 0 auto;
+      }
+
+      #login-container {
+        width: 450px;
+        margin: 0 auto;
+      }
+
+      #id,
+      #password {
+        width: 450px;
+        height: 50px;
+        font-size: large;
+        border: none;
+        border-bottom: 2px solid lightgray;
+      }
+      #id:focus,
+      #password:focus {
+        outline: none;
+        border-bottom: 2px solid black;
+      }
+      #check-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 450px;
+        padding-top: 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+      #check {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-image: url(ico_comm.png);
+        background-position: 0 0;
+        background-size: 150px auto;
+      }
+      #check:checked {
+        background-image: url(ico_comm.png);
+        background-position: -25px 0;
+      }
+      label {
+        font-size: 14px;
+        color: grey;
+        margin-left: 5px;
+      }
+      #icon {
+        width: 18px;
+        height: 18px;
+        background-image: url(ico_comm.png);
+        background-position: -130px -125px;
+        background-size: 150px auto;
+        margin-left: 5px;
+      }
+      button {
+        width: 450px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      #login-btn {
+        margin-top: 40px;
+        background-color: #fee500;
+      }
+      #login-btn:hover {
+        background-color: #f6de03;
+      }
+      #qr-login-btn:hover {
+        background-color: rgb(232, 229, 229);
+      }
+      #or-text {
+        width: 100%;
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        font-size: 12px;
+        color: #828282;
+        margin: 15px 0;
+      }
+      #or-text::before,
+      #or-text::after {
+        content: "";
+        flex-grow: 1;
+        background-color: rgba(0, 0, 0, 0.08);
+        height: 1px;
+        margin: 0 10px;
+      }
+      a {
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #191919;
+      }
+      #info-user {
+        width: 100%;
+        margin: 30px 0;
+        padding-bottom: 20px;
+      }
+      #link-join {
+        float: left;
+      }
+      .link-user {
+        float: right;
+      }
+      #find-password::before {
+        content: "";
+        float: left;
+        width: 1px;
+        height: 10px;
+        margin: 4px 10px;
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      li {
+        list-style: none;
+      }
+      #box-bnr {
+        margin: 0 auto;
+        margin-top: 60px;
+        width: 450px;
+        height: 84px;
+        background-color: #f3f3f3;
+      }
+      #footer {
+        display: flex;
+        text-align: center;
+        margin: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+      select {
+        color: #666666;
+        border: none;
+        font-size: 12px;
+      }
+
+      #footer1::before,
+      #footer2::before,
+      #footer3::before {
+        content: "|";
+        margin: 5px;
+        color: rgba(0, 0, 0, 0.184);
+      }
+      #footer1,
+      #footer3 {
+        color: #666666;
+      }
+      #footer4 {
+        margin-left: 20px;
+        font-size: 12px;
+        color: #666666;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box" id="header">
+        <div id="logo"></div>
+      </div>
+      <div class="box" id="content">
+        <div class="login-box" id="login-container">
+          <form class="login-box" id="login-form">
+            <input
+              type="text"
+              class="login-box"
+              id="id"
+              placeholder="카카오메일 아이디, 이메일, 전화번호"
+            />
+            <br />
+            <input
+              type="password"
+              class="login-box"
+              id="password"
+              placeholder="비밀번호"
+            />
+            <div class="login-box" id="check-container">
+              <input id="check" name="check" type="checkbox" />
+              <label for="check">간편 로그인 정보 저장</label>
+              <div id="icon"></div>
+            </div>
+            <button type="submit" id="login-btn">로그인</button>
+            <div id="or-text">또는</div>
+            <button type="submit" id="qr-login-btn">QR코드 로그인</button>
+          </form>
+          <div id="info-user">
+            <a
+              href="https://accounts.kakao.com/weblogin/create_account/?continue=https%3A%2F%2Fwww.daum.net&lang=ko&showHeader=false#intro"
+              id="link-join"
+              >회원가입</a
+            >
+            <ul id="list-user">
+              <li>
+                <a
+                  href="https://accounts.kakao.com/weblogin/find_password?continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fwww.daum.net&lang=ko&showHeader=false"
+                  class="link-user"
+                  id="find-password"
+                  >비밀번호 찾기</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://accounts.kakao.com/weblogin/find_account?continue=https%3A%2F%2Fwww.daum.net&lang=ko&showHeader=false"
+                  class="link-user"
+                  id="find-account"
+                  >계정 찾기</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div id="box-bnr">
+            <a
+              href="https://accounts.kakao.com/weblogin/unify_campaign?continue=https%3A%2F%2Fwww.daum.net"
+              id="link-bnr"
+            >
+              <img
+                src="img_bnr.png"
+                alt="[광고] 통합하지 않은 Daum ID 안내 카카오계정과 통합 후 이용할 수 있어요"
+                height="100%"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <select name="lang" id="lang">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+        <a href="https://www.kakao.com/policy/terms?lang=ko" id="footer1"
+          >이용약관</a
+        >
+        <a href="https://www.kakao.com/policy/privacy?lang=ko" id="footer2"
+          >개인정보 처리방침</a
+        >
+        <a href="https://cs.kakao.com/" id="footer3">고객센터</a>
+
+        <div id="footer4">© kakao Corp</div>
+      </div>
+    </div>
+  </body>
+</html>

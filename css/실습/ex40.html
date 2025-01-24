@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>텍스트나 콘첸츠의 정렬</title>
+    <!-- 수평정렬 : text-align -->
+    <!-- 수직정렬 : vertical-align -->
+    <style>
+      .box {
+        border: 1px solid red;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-justify {
+        text-align: justify;
+      }
+      .text-justify:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- text-align -->
+    <div class="box text-left">왼쪽 정렬</div>
+    <div class="box text-center">가운데 정렬</div>
+    <div class="box text-right">오른쪽 정렬</div>
+    <div class="box text-justify">양쪽 정렬</div>
+  </body>
+</html>
