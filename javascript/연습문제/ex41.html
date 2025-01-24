@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제41</title>
+    <script>
+      const num = prompt("숫자를 입력하세요");
+      let isPrime = true;
+
+      for (let i = 2; i < num; i++) {
+        isPrime = true;
+        if (num % i == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime == true) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

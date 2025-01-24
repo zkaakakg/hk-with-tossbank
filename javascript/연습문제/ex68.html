@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제68</title>
+    <script>
+      function solution(busTimes, nowTime) {
+        let result = [];
+        let now = nowTime.split(":").map((n) => parseInt(n, 10));
+        now = now[0] * 60 + now[1];
+
+        busTimes.array.forEach((data) => {
+          let time = data.split(":").map((n) => parseInt(n, 10));
+          time = time[0] * 60 + time[1];
+
+          if (now > time) {
+            result.push("지나갔습니다.");
+          } else {
+            let h = Math.foor((now - time) / 60);
+            let m = (now - time) % 60;
+            result.push(h);
+          }
+        });
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

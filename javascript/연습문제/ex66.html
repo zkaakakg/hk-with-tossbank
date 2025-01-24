@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제66</title>
+    <script>
+      const towers = ["ABCDEF", "BCAD", "ADEFQRX", "BEDFG", "EFGHZ"];
+      const rule = "ABD";
+      let result = [];
+      let isCheck = true;
+
+      towers.forEach((tower) => {
+        let arr = [];
+        for (let c of rule) {
+          if (tower.includes(c)) {
+            arr.push(tower.indexOf(c));
+          }
+        }
+        for (let i = 0; i < arr.length - 1; i++) {
+          isCheck = true;
+          if (arr[i] > arr[i + 1]) {
+            isCheck = false;
+            break;
+          }
+        }
+        if (isCheck) {
+          result.push("가능");
+        } else {
+          result.push("불가능");
+        }
+      });
+
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제56</title>
+    <script>
+      const nationWidth = {
+        korea: 220877,
+        Rusia: 17098242,
+        China: 9596961,
+        France: 543965,
+        Japan: 377915,
+        England: 242900,
+      };
+      let min = Number.MAX_SAFE_INTEGER;
+      let nat = "";
+      for (const nation in nationWidth) {
+        let sub = nationWidth[nation] - nationWidth["korea"];
+        if (nation != "korea") {
+          if (sub < min) {
+            min = sub;
+            nat = nation;
+          }
+        }
+      }
+      console.log(nat, min);
+    </script>
+  </head>
+  <body></body>
+</html>

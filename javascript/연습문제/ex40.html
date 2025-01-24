@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제40</title>
+    <script>
+      const names = ["장미", "수선화", "코스모스"];
+      let max = 0;
+      let long = "";
+
+      names.forEach(function (data) {
+        console.log(data);
+      });
+
+      names.forEach(function (data) {
+        if (max < data.length) {
+          max = data.length;
+          long = data;
+        }
+      });
+      console.log(`가장 긴 단어는 ${long}입니다.`);
+    </script>
+  </head>
+  <body></body>
+</html>

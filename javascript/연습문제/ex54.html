@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제54</title>
+    <script>
+      let nums = prompt("숫자를 입력해주세요").split(" ");
+      let isCheck = true;
+      for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] == nums[i + 1] - 1) {
+          isCheck = true;
+        } else {
+          isCheck = false;
+          break;
+        }
+      }
+      if (isCheck) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제25</title>
+    <script>
+      const name = prompt("이름을 입력하세요").split(" ");
+      const score = prompt("수학점수를 입력하세요").split(" ");
+      const student = {};
+
+      for (let i = 0; i < name.length; i++) {
+        student[name[i]] = parseInt(score[i], 10);
+      }
+
+      console.log(student);
+    </script>
+  </head>
+  <body></body>
+</html>

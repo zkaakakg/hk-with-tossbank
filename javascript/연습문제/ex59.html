@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제59</title>
+    <script>
+      let arr = [];
+      let str = prompt("문자열을 입력하세요");
+      let n = (50 - str.length) / 2;
+      let left = Math.floor(n);
+      let right = Math.ceil(n);
+      for (let i = 0; i < left; i++) {
+        arr += "=";
+      }
+      let result = arr + str;
+      for (let i = 0; i < right; i++) {
+        result += "=";
+      }
+      console.log(result);
+      console.log(result.length);
+    </script>
+  </head>
+  <body></body>
+</html>

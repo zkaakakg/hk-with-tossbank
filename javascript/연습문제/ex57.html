@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제57</title>
+    <script>
+      let cnt = 0;
+      for (let i = 0; i <= 1000; i++) {
+        let str = String(i);
+        for (let char of str) {
+          if (char === "1") {
+            cnt++;
+          }
+        }
+      }
+      console.log(cnt);
+    </script>
+  </head>
+  <body></body>
+</html>

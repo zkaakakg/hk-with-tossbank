@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제36</title>
+    <script>
+      const arr = prompt("학생들의 점수를 입력하세요").split(" ");
+      arr.sort((a, b) => b - a);
+      let arr2 = Array.from(new Set(arr));
+      console.log(arr.lastIndexOf(arr2[2]) + 1);
+    </script>
+  </head>
+  <body></body>
+</html>

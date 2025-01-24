@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제35</title>
+    <script>
+      const arr = prompt("학생들이 봅은 후보들을 입력하세요").split(" ");
+      let result = {};
+      let leader = "";
+      let maxVotes = 0;
+
+      for (let idx in arr) {
+        let data = arr[idx];
+        if (result[data]) {
+          result[data]++;
+        } else {
+          result[data] = 1;
+        }
+      }
+      for (let student in result) {
+        if (result[student] > maxVotes) {
+          maxVotes = result[student];
+          leader = student;
+        }
+      }
+      console.log(`${leader}(이)가 총 ${maxVotes}표로 반장이 되었습니다.`);
+    </script>
+  </head>
+  <body></body>
+</html>

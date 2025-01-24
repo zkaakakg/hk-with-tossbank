@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제33</title>
+    <script>
+      function one(n) {
+        function two(v) {
+          const result = Math.pow(v, n);
+          return result;
+        }
+        return two;
+      }
+
+      const a = one(2);
+      const b = one(3);
+      const c = one(4);
+
+      console.log(a(10));
+      console.log(b(10));
+      console.log(c(10));
+    </script>
+  </head>
+  <body></body>
+</html>

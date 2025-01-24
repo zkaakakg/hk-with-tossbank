@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제38</title>
+    <script>
+      const limit = prompt("제한 무게를 입력해주세요");
+      const n = prompt("친구들의 수를 입력해주세요");
+      let sum = 0;
+      let cnt = 0;
+      for (let i = 1; i <= n; i++) {
+        sum += parseInt(prompt("몸무게를 입력해주세요"), 10);
+        if (sum > limit) {
+          cnt = i - 1;
+          break;
+        }
+      }
+      console.log(cnt);
+    </script>
+  </head>
+  <body></body>
+</html>

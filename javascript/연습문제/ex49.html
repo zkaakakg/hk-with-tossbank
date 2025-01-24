@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제49</title>
+    <script>
+      let nums = prompt("10개의 숫자를 입력하세요").split(" ");
+      let max = 0;
+      for (let num of nums) {
+        num = Number(num);
+        if (max < num) {
+          max = num;
+        }
+      }
+
+      console.log(max);
+    </script>
+  </head>
+  <body></body>
+</html>

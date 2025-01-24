@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제67</title>
+    <script>
+      const n = prompt("행사에서 진행된 악수의 횟수를 입력하세요");
+      let cnt = 0;
+      let result;
+      while (true) {
+        let x = (cnt * (cnt - 1)) / 2;
+        if (x > n) {
+          break;
+        }
+        cnt++;
+      }
+      result = n - ((cnt - 1) * (cnt - 2)) / 2;
+      console.log(`[${cnt}, ${result}]`);
+    </script>
+  </head>
+  <body></body>
+</html>

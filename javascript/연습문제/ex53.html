@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문제53</title>
+    <script>
+      function solution(arr) {
+        let stack = [];
+        for (let a of arr) {
+          if (a == "(") {
+            stack.push(a);
+          } else {
+            if (stack.length == 0) {
+              return false;
+            } else {
+              stack.pop();
+            }
+          }
+        }
+        if (stack.length == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      let arr = prompt("괄호를 입력해주세요");
+      if (solution(arr)) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
