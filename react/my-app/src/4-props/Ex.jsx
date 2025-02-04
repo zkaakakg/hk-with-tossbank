@@ -6,6 +6,7 @@
 // - `name`이라는 `props`를 받아 "환영합니다,
 //   [이름]님!"이라는 문구를 렌더링합니다.
 // - 부모 컴포넌트에서 여러 사람의 이름을 넘겨 출력합니다.
+
 function Greeting(props) {
   return (
     <div>
@@ -29,6 +30,7 @@ export function Props1() {
 // - `UserCard`라는 자식 컴포넌트를 작성하세요.
 // - `name`, `age`, `job`을 `props`로 받아 사용자 정보를 표시합니다.
 // - 부모 컴포넌트에서 두 명의 사용자 정보를 전달해 렌더링합니다.
+
 function UserCard(props) {
   return (
     <div>
@@ -53,6 +55,7 @@ export function Props2() {
 // - `ItemList`라는 자식 컴포넌트를 작성하세요.
 // - `items`라는 배열을 `props`로 받아 `<li>` 태그로 각 항목을 렌더링합니다.
 // - 부모 컴포넌트에서 두 개의 다른 배열을 전달해 두 개의 목록을 출력합니다.
+
 function ItemList(props) {
   return (
     <div>
