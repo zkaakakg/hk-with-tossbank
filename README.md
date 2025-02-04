@@ -5,10 +5,10 @@
 
 ## 🔨 Skill
 **프론트엔드** <br>
-`HTML5` `CSS3` `Javscript` `Typescript` `React` `Next.js`
+`HTML5` `CSS3` `Javscript` `Typescript` `React` `Next.js`<br>
 **백엔드** <br>
-`Node.js` `Java` `MySQL` `Spring`
-**클라우드 배포, 운영**
+`Node.js` `Java` `MySQL` `Spring`<br>
+**클라우드 배포, 운영**<br>
 `AWS` 
 
 ## 📁 프로젝트
