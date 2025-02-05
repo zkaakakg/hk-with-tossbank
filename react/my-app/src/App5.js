@@ -1,8 +1,8 @@
 import React from "react";
-import * as E from "./5-lifecycle-useEffect/Ex";
+import * as E from "./5-lifecycle-useEffect/Lifecycle";
 
 function App() {
-  return <E.DataFetcher />;
+  return <E.Lifecycle />;
 }
 
 export default App;

@@ -82,7 +82,7 @@ export function LifecycleFunc() {
 
   return (
     <div>
-      <h1>리액트 라이프사이클(함수형 컴퍼넌트방식)</h1>
+      <h1>리액트 라이프사이클(함수형)</h1>
       <p>count: {count}</p>
       <button
         onClick={() => {

@@ -1,8 +1,8 @@
 import React from "react";
-import * as E from "./6-state/Ex";
+import * as E from "./6-state/State";
 
 function App() {
-  return <E.AddList />;
+  return <E.LikeButton />;
 }
 
 export default App;

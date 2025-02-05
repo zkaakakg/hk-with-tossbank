@@ -10,8 +10,11 @@ export function DisplayInput() {
     <div>
       <input
         type="text"
-        onChange={(data) => {
-          setData(data.target.value);
+        // 이벤트함수 매게변수로 event객체로 받을 수 있다.
+        // e:이벤트 객체 - 이벤트에 대한 정보를 담고있다.
+        // e.target : 이벤트가 발생한 객체(input 객체)
+        onChange={(e) => {
+          setData(e.target.value);
         }}
       />
       <p>{data}</p>
@@ -50,12 +53,9 @@ export function Checkbox() {
     <div>
       <input
         type="checkbox"
-        onChange={(check) => {
-          if (check.target.checked) {
-            setChecked(true);
-          } else {
-            setChecked(false);
-          }
+        checked={checked}
+        onChange={() => {
+          setChecked(!checked);
         }}
       />
       <p>{checked ? "ON" : "OFF"}</p>
@@ -100,14 +100,13 @@ export function AddList() {
     <div>
       <input
         type="text"
-        onChange={(data) => {
-          setData(data.target.value);
+        onChange={(e) => {
+          setData(e.target.value);
         }}
       />
       <button
         onClick={() => {
-          let newData = data;
-          setList((prev) => [...prev, newData]);
+          setList((prev) => [...prev, data]);
           setData("");
         }}
       >
