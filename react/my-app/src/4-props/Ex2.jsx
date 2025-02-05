@@ -7,7 +7,7 @@
 // - isMorning이 true이면 "좋은 아침입니다, [name]님!"
 //   그렇지 않으면 "좋은 저녁입니다, [name]님!"
 // - 부모 컴포넌트에서 두 가지 경우를 모두 테스트하세요.
-import { useState } from "react";
+import { Children, useState } from "react";
 
 function Greeting(props) {
   return (
@@ -99,17 +99,14 @@ function ItemDetailList(props) {
   );
 }
 export function Props3() {
+  let A = { name: "사과", details: ["빨간색", "달콤함", "비타민 C"] };
+  let B = { name: "바나나", details: ["노란색", "부드러움", "에너지 보충"] };
+  let C = { name: "포도", details: ["보라색", "상큼함", "항산화 효과"] };
   return (
     <div>
-      <ItemDetailList name="사과" details={["빨간색", "달콤함", "비타민 C"]} />
-      <ItemDetailList
-        name="바나나"
-        details={["노란색", "부드러움", "에너지 보충"]}
-      />
-      <ItemDetailList
-        name="포도"
-        details={["보라색", "상큼함", "항산화 효과"]}
-      />
+      <ItemDetailList {...A} />
+      <ItemDetailList {...B} />
+      <ItemDetailList {...C} />
     </div>
   );
 }
@@ -125,17 +122,19 @@ export function Props3() {
 // </p>
 // 강조할 부분은 노란색 배경과 굵은 텍스트로 표시하세요.
 // 스타일 객체 { backgroundColor: "yellow", fontWeight: "bold", padding: "10px" }
-function HighlightBox() {}
+function HighlightBox({ children }) {
+  const style = {
+    backgroundColor: "yellow",
+    fontWeight: "bold",
+    padding: "10px",
+  };
+  return <span style={style}>{children}</span>;
+}
 export function Props4() {
   return (
-    <div>
-      <HighlightBox
-        style={{
-          backgroundColor: "yellow",
-          fontWeight: "bold",
-          padding: "10px",
-        }}
-      />
-    </div>
+    <p>
+      아래 텍스트에서 중요한 부분은 <HighlightBox>노란색으로 표시</HighlightBox>
+      됩니다.
+    </p>
   );
 }
