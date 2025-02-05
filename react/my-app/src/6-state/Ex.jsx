@@ -80,7 +80,7 @@ export function LimitNumber() {
           }
         }}
       >
-        숫자 증가
+        숫자증가
       </button>
       <p>{num}</p>
     </div>
