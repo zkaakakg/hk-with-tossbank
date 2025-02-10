@@ -3,7 +3,7 @@ import React from "react";
 import * as ex from "./8-event/Ex";
 
 function App() {
-  return <ex.LimitWord />;
+  return <ex.FormSubmit />;
 }
 
 export default App;
