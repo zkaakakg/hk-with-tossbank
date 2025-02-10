@@ -133,7 +133,10 @@ export function Counter5() {
       console.log("useCallback 메모이제이션");
       setNumber(parseInt(e.target.value));
     },
-    [number]
+    [
+      /*number*/
+    ] //의존성 배열에 number를 포함하면, number값이 변경될 때마다
+    // handle1numberChangeㅎ 함수가 새롭게 생성됩니다.
   );
 
   const handInputChange = useCallback(
