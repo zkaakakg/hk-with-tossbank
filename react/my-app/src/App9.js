@@ -1,9 +1,9 @@
 import React from "react";
-// import * as E from "./9-conditionalRender/ConditionalRender";
-import * as ex from "./9-conditionalRender/Ex";
+import * as E from "./9-conditionalRender/ConditionalRender";
+// import * as ex from "./9-conditionalRender/Ex";
 
 function App() {
-  return <ex.Conditional3 />;
+  return <E.Conditional1 isLoggedin={true} />;
 }
 
 export default App;
