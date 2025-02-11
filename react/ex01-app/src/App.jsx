@@ -1,7 +1,7 @@
-import Header from "./semanticTag/Header";
-import Nav from "./semanticTag/Nav";
-import Main from "./semanticTag/Main";
-import Footer from "./semanticTag/Footer";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
