@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#nav ul li {
+  display: inline-block;
+  position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#nav a {
+  color: rgb(107, 107, 107);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 20px;
+  display: block;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nav > ul > li > a:hover {
+  color: rgb(66, 66, 245);
+}
+#nav ul li:hover > #dropdown {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background-color: white;
+  border: 1px solid #cccccc58;
+  border-radius: 5px;
+  display: none;
+  padding: 5px 0;
+  box-shadow: 0 0 10px rgba(224, 224, 224, 0.521);
 }
 
-.card {
-  padding: 2em;
+#dropdown li {
+  display: block;
+  width: 100%;
 }
-
-.read-the-docs {
-  color: #888;
+#dropdown a {
+  padding: 8px 12px;
+  color: rgb(107, 107, 107);
+  font-weight: 500;
+  display: block;
+}
+#dropdown a:hover {
+  background-color: #cad6e369;
 }
