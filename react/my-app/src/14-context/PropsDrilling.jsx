@@ -16,7 +16,7 @@ import React from "react";
 
 // 전역 상태 변수 예) 테마, 로그인 여부, 사용자 프로필
 
-function GrandComponent({ theme, toggleTheme }) {
+function GrandComponent({ theme, toggleTheme, user }) {
   const styles = {
     width: "100vw",
     height: "100vh",
