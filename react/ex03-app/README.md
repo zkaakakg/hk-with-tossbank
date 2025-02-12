@@ -1,8 +1,10 @@
-# React + Vite
+# 반응형 웹 화면 구현하기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### PC 화면 & 드롭다운 구현
+![image](https://github.com/user-attachments/assets/978925f6-3fe4-4eec-8394-4a01b96dd03b)
 
-Currently, two official plugins are available:
+### 태블릿 화면
+![image](https://github.com/user-attachments/assets/4a1e446a-8851-4c5a-b7cf-8a5e3c2ff4e4)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 모바일 화면
+![image](https://github.com/user-attachments/assets/a140dd26-fc43-49c7-a650-56b1d4ceb09d)
