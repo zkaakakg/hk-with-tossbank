@@ -3,8 +3,8 @@ import ThemeContext from "./ThemeContext";
 import ThemeContextUseContext from "./ThemeContextUseContext";
 import ThemeContextConsumer from "./ThemeContextConsumer";
 
-function ThemeContextProvider({ initTeme }) {
-  const [theme, setTheme] = useState(initTeme);
+function ThemeContextProvider({ initTheme }) {
+  const [theme, setTheme] = useState(initTheme);
 
   // useMemo : 값이 저장
   // useCallback : 함수를 저장해 놓음
@@ -18,7 +18,7 @@ function ThemeContextProvider({ initTeme }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeContextUseContext />
+      {/* <ThemeContextUseContext /> */}
       <ThemeContextConsumer />
     </ThemeContext.Provider>
   );
