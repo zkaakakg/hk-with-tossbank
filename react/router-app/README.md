@@ -9,7 +9,7 @@
 │ │── App.js # 라우터 설정 파일
 │ │── Navbar.js # 네비게이션 바 컴포넌트
 │ │── main.js # 진입점 (ReactDOM.render)
-
+```
 
 ## Navbar.js → Link를 사용해 정적인 네비게이션 제공
 
