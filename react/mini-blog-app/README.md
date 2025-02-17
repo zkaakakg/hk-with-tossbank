@@ -54,6 +54,18 @@ npm run build
 npm install -g serve<br>
 serve -s dist
 
+### npm dist 폴더를 Github Pages에 배포하기 위한 모듈
+
+npm install -g gh-pages
+
+### package.json
+
+"scripts": {
+"build": "vite build",
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+}
+
 http://localhost:3000
 
 웹서버(WAS)필요
