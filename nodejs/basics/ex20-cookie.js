@@ -17,6 +17,7 @@ const cookieParser = require('cookie-parser')
 const app = express()
 app.use(cookieParser())
 
+app.get('/', (req, res) => {
   // HTTP 응답 헤더 의 setCookie에 값을 넣어서 응답하면, 클라가 쿠키를 저장한다.
   // 클라는 서버에 재잡속시 저장된 쿠키값을 헤더에 넣어서 온다.
   res.cookie('id-number', '1234')
