@@ -13,7 +13,7 @@ app.use(express.json())
 
 // MongoDB Atlas 연결
 const MONGO_URI =
-  'mongodb+srv://admin:1234@mongodb-cluster.wo3pk.mongodb.net/blog'
+  'mongodb+srv://haewon:1234@mongodb-cluster.y8er1.mongodb.net/blog'
 mongoose
   .connect(MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
