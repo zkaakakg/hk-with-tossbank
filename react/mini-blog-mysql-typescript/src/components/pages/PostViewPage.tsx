@@ -73,12 +73,15 @@ const PostViewPage: React.FC = () => {
   const [comment, setComment] = useState<string>('')
 
   // 📌 백엔드에서 게시글 정보 불러오기
+  // 📌 백엔드에서 게시글 정보 불러오기
   useEffect(() => {
     fetch(`http://localhost:5000/posts/${postId}`)
       .then((res) => res.json())
       .then((data: Post) => {
         if (data) {
           setPost(data)
+
+          fetchComments()
         } else {
           console.error('Post not found')
         }
@@ -86,7 +89,7 @@ const PostViewPage: React.FC = () => {
       .catch((err) => console.error('Error fetching post:', err))
   }, [postId])
 
-  useEffect(() => {
+  const fetchComments = () => {
     fetch(`http://localhost:5000/posts/${postId}/comments`)
       .then((res) => res.json())
       .then((data: Comment[]) => {
@@ -97,7 +100,7 @@ const PostViewPage: React.FC = () => {
         }
       })
       .catch((err) => console.error('Error fetching comments:', err))
-  }, [postId])
+  }
 
   // 📌 댓글 추가 함수
   const handleAddComment = () => {
