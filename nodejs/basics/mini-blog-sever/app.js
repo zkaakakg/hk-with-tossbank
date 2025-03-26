@@ -43,7 +43,7 @@ app.get('/posts/:id', async (req, res) => {
       req.params.id,
     ])
     if (!post) return res.status(404).json({ message: 'Post not found' })
-    res.json(post)
+    res.json(post[0])
   } catch (err) {
     res.status(500).json({ error: err.message })
   }
@@ -92,11 +92,33 @@ app.delete('/posts/:id', async (req, res) => {
 app.post('/posts/:id/comments', async (req, res) => {
   try {
     const { content } = req.body
-    const comment = await conn.query(
-      'INSERT INTO comments (comment_content, comment_post_no)',
+    const [comment] = await conn.query(
+      'INSERT INTO comments (comment_content, comment_post_no) VALUES (?, ?)',
       [content, req.params.id]
     )
-    res.json(comment)
+
+    const newComment = {
+      comment_no: comment.insertId,
+      comment_content: content,
+      comment_post_no: req.params.id,
+    }
+    res.json(newComment)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
+app.get('/posts/:id/comments', async (req, res) => {
+  try {
+    const [comments] = await conn.query(
+      'SELECT * FROM comments WHERE comment_post_no = ?',
+      [req.params.id]
+    )
+    if (comments.length === 0)
+      return res
+        .status(404)
+        .json({ message: 'No comments found for this post' })
+    res.json(comments)
   } catch (err) {
     res.status(500).json({ error: err.message })
   }
