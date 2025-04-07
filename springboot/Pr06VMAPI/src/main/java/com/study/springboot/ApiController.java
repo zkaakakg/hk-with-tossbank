@@ -14,28 +14,34 @@ public class ApiController {
     @PostMapping("/product")
     @ResponseBody
     public String add(@RequestBody ReqDto reqDto){
-        products.add(new Product(reqDto.getName(), reqDto.getPrice(), reqDto.getLimit_date()));
-        return  "Product added successfully";
+        products.add(new Product(reqDto.getName(), reqDto.getPrice(), reqDto.getLimitDate()));
+        System.out.println(reqDto.getLimitDate());
+        return  "상품이 추가되었습니다!";
     }
 
     @GetMapping("/product")
     public List<Product> getList() {
         return products;
     }
-//    @PutMapping("/product/{id}")
-//    @ResponseBody
-//    public String update(@PathVariable("id") int id, @RequestBody ReqDto reqDto){
-//        if()
-//
-//
-//        return "index";
-//    }
-//
-//
-//    @DeleteMapping("/product/{id}")
-//    public String delete(){
-//        return "index";
-//    }
+
+    @PutMapping("/product/{index}")
+    @ResponseBody
+    public String update(@PathVariable("index") int index, @RequestBody ReqDto reqDto){
+        if (index >= 0 && index < products.size()) {
+            Product updatedProduct = new Product(reqDto.getName(), reqDto.getPrice(), reqDto.getLimitDate());
+            products.set(index, updatedProduct);
+            return "상품이 수정되었습니다!";
+        } else {
+            return "존재하지 않는 인덱스입니다!";
+        }
+    }
+
+
+    @DeleteMapping("/product/{index}")
+    public String delete(@PathVariable("index") int index){
+        products.remove(index);
+        return "상품이 삭제되었습니다.";
+    }
 
 
 }
