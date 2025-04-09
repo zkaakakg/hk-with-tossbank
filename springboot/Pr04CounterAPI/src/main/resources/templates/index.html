@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>카운터</title>
+</head>
+<body>
+<h1>카운트 : <span id="count">0</span></h1>
+
+<button onclick="plus()">더하기</button>
+<button onclick="minus()">빼기</button>
+
+<script>
+    async function plus() {
+        try {
+            const response = await fetch("/api/plus");
+            const data = await response.json();
+            document.getElementById("count").textContent = data.count;
+        } catch (error) {
+            console.error("더하기 요청 중 오류 발생:", error);
+        }
+    }
+
+    async function minus() {
+        try {
+            const response = await fetch("/api/minus");
+            const data = await response.json();
+            document.getElementById("count").textContent = data.count;
+        } catch (error) {
+            console.error("빼기 요청 중 오류 발생:", error);
+        }
+    }
+</script>
+</body>
+</html>
