@@ -8,6 +8,7 @@ class Ex20LoggerApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("테스트 애플리케이션 로딩 완료!");
 	}
 
 }
